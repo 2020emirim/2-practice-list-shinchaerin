@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
-    <title>Bookmark detail</title>
-</head>
-<body>
+    {% block title %}detail{% endblock %}
+{% block content %}
     {{ bookmark.site_name }} <p></p>
     {{ bookmark.url }}
-</body>
+{% endblock %}
 </html>

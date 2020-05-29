@@ -20,4 +20,4 @@
 - urls detail/<int:pk>/
 - modify bookmark_list detail link
 - update: views BookmarkUpdateView, templates bookmark_update.html, urls, modify Modify link
-- detele: views BookmarkDeleteView, templates bookmark_confirm_delete.html, urls, modify Modify link
+- delete: views BookmarkDeleteView, templates bookmark_confirm_delete.html, urls, modify Modify link

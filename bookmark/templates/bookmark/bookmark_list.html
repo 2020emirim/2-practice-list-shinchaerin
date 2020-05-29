@@ -1,10 +1,8 @@
 <html>
 
-    <head>
-        <title>Bookmark List</title>
-    </head>
+    {% block title %}{% endblock %}
 
-    <body>
+    {% block content %}
         <a href="{% url 'bookmark:add' %}">Add Bookmark</a>
         <p></p>
 
@@ -38,6 +36,6 @@
 
         </table>
 
-    </body>
+    {% endblock %}
 
 </html>
