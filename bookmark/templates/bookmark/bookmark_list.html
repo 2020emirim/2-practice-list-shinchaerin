@@ -1,12 +1,12 @@
-<html>
+{% extends 'base.html' %}
 
     {% block title %}{% endblock %}
 
     {% block content %}
-        <a href="{% url 'bookmark:add' %}">Add Bookmark</a>
+        <a href="{% url 'bookmark:add' %}" class="btn btn-primary btn-sm">Add Bookmark</a>
         <p></p>
 
-        <table>
+        <table class="table">
 
             <thead>
             <tr>
@@ -26,8 +26,8 @@
                         <td>{{ forloop.counter }}</td>
                         <td><a href="{% url 'bookmark:detail' pk=bookmark.id %}">{{ bookmark.site_name }}</a></td>
                         <td><a href="{{ bookmark.url }}">{{ bookmark.url }}</a></td>
-                        <td><a href="{% url 'bookmark:update' pk=bookmark.id %}">Modify</a></td>
-                        <td><a href="{% url 'bookmark:delete' pk=bookmark.id %}">Delete</a></td>
+                        <td><a href="{% url 'bookmark:update' pk=bookmark.id %}" class="btn btn-success btn-sm">Modify</a></td>
+                        <td><a href="{% url 'bookmark:delete' pk=bookmark.id %}" class="btn btn-danger btn-sm">Delete</a></td>
                     </tr>
 
                 {% endfor %}
@@ -37,5 +37,3 @@
         </table>
 
     {% endblock %}
-
-</html>

@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
     {% block title %}Update{% endblock %}
 
@@ -9,9 +8,7 @@
             <table>
                 {{ form.as_table }}
             </table>
-            <button type="submit">Modify</button>
+            <button type="submit" class="btn btn-primary btn-sm">Modify</button>
         </form>
-        <button onclick="history.back()">Cancel</button>
+        <button onclick="history.back()" class="btn btn-info btn-sm">Cancel</button>
     {% endblock %}
-
-</html>
